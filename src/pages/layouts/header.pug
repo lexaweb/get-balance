@@ -1,0 +1,63 @@
+-
+  var project =[
+    {link: 'квартиры'},
+    {link: 'расположение'},
+    {link: 'инфраструктура'},
+    {link: 'ход строительства'},
+    {link: 'архитектура'},
+    {link: 'дворы и парк'},
+    {link: 'сервисы'},
+    {link: 'документы'}
+  ]
+
+-
+  var purchase =[
+    {link: 'магазин'},
+    {link: 'как обрести'},
+    {link: 'ипотека'},
+    {link: 'оформление'}
+  ]
+
+-
+  var slider =[
+    {img: 'img/menu_slider-1.jpg', text: 'кухни-гостиные'},
+    {img: 'img/menu_slider-2.jpg', text: 'угловое остекление'},
+    {img: 'img/menu_slider-3.jpg', text: 'французские балконы'},
+    {img: 'img/menu_slider-4.jpg', text: 'цифры'},
+    {img: 'img/menu_slider-5.jpg', text: '3d-тур по лобби'},
+    {img: 'img/menu_slider-6.jpg', text: 'как мы сделали баланс'}
+  ]
+
+header.header
+  .inner
+    .mb 
+      span
+      span
+    .logo
+      a(href="/")
+        +icon('header_logo_white')
+        +icon('header_logo_black')
+    .store
+      a(href="/") магазин квартир
+        +icon('header_cart_white')
+        +icon('header_cart_blue')
+    .menu
+      .inner
+        .main-menu
+          .menu-block
+            .menu-block-title проект
+            .menu-block-list
+              each a in project
+                a(href="/")=a.link
+          .menu-block
+            .menu-block-title покупка
+            .menu-block-list
+              each a in purchase
+                a(href="/")=a.link
+        .menu-slider
+          each item in slider
+            .swiper-slider
+              a(href="/")
+                .img
+                  img(src=item.img, alt=item.text)
+                span=item.text

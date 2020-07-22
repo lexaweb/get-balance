@@ -1,0 +1,19 @@
+@import 'layouts/header';
+@import 'layouts/global';
+@import 'layouts/footer';
+
+body {
+  .wrapper {
+    .inner {
+      max-width: 1260px;
+      div {
+        p {
+          font: 300 18px/1.5 $font;
+        }
+      }
+      .swiper-container {
+        height: 200px;
+      }
+    }
+  }
+}

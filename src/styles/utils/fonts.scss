@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'TRYClother';
+  font-display: swap;
+  src: url('../fonts/TRYClother-Regular.eot');
+  src: url('../fonts/TRYClother-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TRYClother-Regular.woff2') format('woff2'),
+    url('../fonts/TRYClother-Regular.woff') format('woff'),
+    url('../fonts/TRYClother-Regular.ttf') format('truetype'),
+    url('../fonts/TRYClother-Regular.svg#TRYClother-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TRYClother';
+  font-display: swap;
+  src: url('../fonts/TRYClother-Bold.eot');
+  src: url('../fonts/TRYClother-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TRYClother-Bold.woff2') format('woff2'), url('../fonts/TRYClother-Bold.woff') format('woff'),
+    url('../fonts/TRYClother-Bold.ttf') format('truetype'),
+    url('../fonts/TRYClother-Bold.svg#TRYClother-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
