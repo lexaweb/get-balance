@@ -26,5 +26,9 @@ $(document).ready(() => {
     $(".header").toggleClass("active");
   });
 
-  
+  $(".tab_item").not(":first").hide();
+  $(".tabs-img .tab").click(function() {
+    $(".tabs-img .tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".tab_item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
 });

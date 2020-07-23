@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   svgstore = require('gulp-svgstore'),
+  filter = require('gulp-filter'),
   rename = require('gulp-rename')
 
 module.exports = function svgSprite() {

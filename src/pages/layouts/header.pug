@@ -29,7 +29,6 @@
   ]
 
 header.header
-  .inner
     .mb 
       span
       span
@@ -61,3 +60,13 @@ header.header
                 .img
                   img(src=item.img, alt=item.text)
                 span=item.text
+        .footer-menu
+          .contacts
+            .address
+              a(href="/") москва, рязанский проспект, 26
+            .mail
+              a(href="mailto:welcome@get-balance.ru") welcome@get-balance.ru
+          .dev_logo
+            a(href="/")
+              +icon('logo_glavstroy')
+            p один из крупнейших девелоперов россии, входит в список системообразующих компаний.
