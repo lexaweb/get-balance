@@ -26,9 +26,35 @@ $(document).ready(() => {
     $(".header").toggleClass("active");
   });
 
-  $(".tab_item").not(":first").hide();
-  $(".tabs-img .tab").click(function() {
-    $(".tabs-img .tab").removeClass("active").eq($(this).index()).addClass("active");
-    $(".tab_item").hide().eq($(this).index()).fadeIn()
-  }).eq(0).addClass("active");
+
+  // $(function() {
+
+  //   $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+  //     $(this).addClass('active').siblings().removeClass('active')
+  //       .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+  //   })
+  
+  // })
+  
+
+    $(".tab_item").not(":first").hide();
+    $(".tabs-img .tab").click(function() {
+      $(".tabs-img .tab").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tab_item").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    var header = $('.header'),
+		scrollPrev = 0;
+
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
+ 
+	if ( scrolled > 50 && scrolled > scrollPrev ) {
+		header.addClass('hide');
+	} else {
+		header.removeClass('hide');
+	}
+	scrollPrev = scrolled;
+});
+  
 });

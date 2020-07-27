@@ -7,8 +7,7 @@ body {
     color: $black;
     .top-block {
       height: 516px;
-      background: url('../img/top_img1.jpg') 50% no-repeat;
-      background-size: cover;
+      background: url('../img/top_img1.jpg') 50% 0 fixed;
       .inner {
         display: flex;
         align-items: flex-end;
@@ -83,7 +82,8 @@ body {
       }
       .section {
         &-1,
-        &-2 {
+        &-2,
+        &-7 {
           .img-block {
             display: flex;
             justify-content: space-between;
@@ -110,6 +110,68 @@ body {
                 width: calc((100% - 20px) / 2);
               }
             }
+          }
+        }
+        &-3,
+        &-4 {
+          .img-block {
+            margin-bottom: 45px;
+          }
+          a {
+            display: inline-block;
+            color: #0971ff;
+            transition: 0.3s;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &-4,
+        &-6 {
+          .img-block {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .item {
+              width: calc((100% - 20px) / 2);
+              &:first-child {
+                width: 100%;
+                margin-bottom: 20px;
+              }
+              p {
+                font-size: 1rem;
+                color: $black;
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+        &-5 {
+          .img-block {
+            .green {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              margin-top: 25px;
+              .green-item {
+                margin-right: 30px;
+                p {
+                  width: 120px;
+                  font-size: calc(0.7vw + 0.5rem);
+                  color: $black;
+                  text-align: center;
+                  margin: 15px auto 0 auto;
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+        &-7 {
+          .img-block {
+            margin-bottom: 45px;
           }
         }
       }
