@@ -36,8 +36,8 @@ body {
           font: 400 22px/1.5 $font;
           margin-bottom: 50px;
         }
-        .tabs-img {
-          .tabs {
+        .tabs {
+          .tabs-headings {
             position: relative;
             &::before {
               content: '';
@@ -48,7 +48,7 @@ body {
               left: 0;
               background: #cdcdcd;
             }
-            .tab {
+            .tabs-hedings-title {
               position: relative;
               font: 400 16px/22px $font;
               color: $grey;
@@ -69,13 +69,13 @@ body {
                 transition: 0.3s;
               }
             }
-            .tab.active {
+            .tabs-hedings-title.active {
               &::before {
                 background: $black;
               }
             }
           }
-          .tab_content {
+          .tab-content {
             padding-top: 40px;
           }
         }
