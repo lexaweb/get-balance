@@ -39,13 +39,13 @@ block content
           h2 как он устpoeн
         .text
           b в парке пять зон для разных занятий
-        .tabs
-          .tabs-headings
-            span.tabs-hedings-title.active социальная жизнь
-            span.tabs-hedings-title цветники
-            span.tabs-hedings-title кутеpьма
-            span.tabs-hedings-title спорт
-            span.tabs-hedings-title задумчивость
+        .tab
+          .tab-heading
+            span.tab-heading-title.active социальная жизнь
+            span.tab-heading-title цветники
+            span.tab-heading-title кутеpьма
+            span.tab-heading-title спорт
+            span.tab-heading-title задумчивость
           .tab-content
             .tab-content-item
               .text в центре парка собираются все жители района. родители с детьми, хозяева с собаками и интеллектуалы с книгами проводят время на площадках и скамейках, знакомятся и общаются.
@@ -159,12 +159,139 @@ block content
             img(src="img/playground_img2.jpg", alt="playground_img2")
             img(src="img/playground_img3.jpg", alt="playground_img3")
         .text со смотровой площадки на холме можно охватить взглядом парк. у подножия — скамейки для отдыха в тени деревьев. стоит выпасть снегу, аккуратные склоны превращаются в горку для катания на санках.
-        .tabs
-          .tabs-headings
-            span.tabs-hedings-title.active летом
-            span.tabs-hedings-title зимой
+        .tab
+          .tab-heading
+            span.tab-heading-title.active летом
+            span.tab-heading-title зимой
           .tab-content
             .tab-content-item
               img(src="img/playground_img4.jpg", alt="playground_img4")
             .tab-content-item
               img(src="img/playground_img5.jpg", alt="playground_img5")
+      section.section-8
+        .title
+          h2 двоpы
+        .text тут тоже есть разные зоны: для детей, тихого отдыха и для тренировок, но все разнесено так, что всем
+          | комфортно и никто никому не мешает. функциональные зоны отделены от подъездов деревьями, и когда
+          | ты внутри, оказываешься окружен зеленью со всех сторон.
+        .tab
+          .tab-heading
+            span.tab-heading-title.active общая концепция
+            span.tab-heading-title концепция двора 2-го корпуса
+          .tab-content
+            .tab-content-item
+              img(src="img/yards_img1.jpg", alt="yards_img1")
+            .tab-content-item
+              img(src="img/yards_img2.jpg", alt="yards_img2")
+      section.section-9
+        .title
+          h2 спорт
+        .text тренировки на свежем воздухе — это кайф. в парке несколько опций для занятий: можно прикрепить trx
+          | на турник, встать в асаны на поляне, разгромить соперника в настольный теннис или поиграть в
+          | командную игру «кто быстрее заснет» на шезлонгах.
+        .img-block
+          .item
+            img(src="img/sport_img1.jpg", alt="sport_img1")
+          .item
+            img(src="img/sport_img2.jpg", alt="sport_img2")
+          .item
+            img(src="img/sport_img3.jpg", alt="sport_img3")
+      section.section-10
+        .title
+          h2 дог-френдли
+        .text мы любим псов и хотим, чтобы им и их хозяевам было комфортно. для этого созданы поляны для беготни
+          | за палками, луга для игр с друзьями и станции с пакетами для уборки.
+        .img-block
+          .item
+            img(src="img/dog_friendly_img1.jpg", alt="dog_friendly_img1")
+          .item
+            img(src="img/dog_friendly_img2.jpg", alt="dog_friendly_img2")
+            img(src="img/dog_friendly_img3.jpg", alt="dog_friendly_img3")
+      section.section-11
+        .title
+          h2 тихий отдых
+        .text скамейки, клумбы с высокими бортиками для сидения, мягкое покрытие под деревьями,
+          | кустарники и деревья с пышными кронами — место для интровертов всегда найдется.
+        .img-block
+          .item
+            img(src="img/quiet_rest_img1.jpg", alt="quiet_rest_img1")
+          .item
+            img(src="img/quiet_rest_img2.jpg", alt="quiet_rest_img2")
+          .item
+            img(src="img/quiet_rest_img3.jpg", alt="quiet_rest_img3")
+      section.settle
+        .title
+          h2 поселись рядом с этим парком
+        a(href="/") интернет-магазин квартир
+      section.section-12
+        .title
+          h2 узнай больше
+        .mi-slider
+          .swiper-wrapper
+            a.swiper-slide.i1(href="/")
+              .i-inf
+                .i-title архитектура
+                .i-desc 
+                  | алюминий и кирпич,
+                  br
+                  | фасады и строительство —
+                  br
+                  | раздел для въедливых.
+                .i-detailed
+                  span подробнее
+            a.swiper-slide.i2(href="/")
+              .i-inf
+                .i-title сервисы
+                .i-desc двери открыва-
+                  br
+                  | ются телефоном,
+                  br
+                  | а управляющая
+                  br
+                  | компания отвечает
+                  br
+                  | в приложении.
+                .i-detailed
+                  span подробнее
+            a.swiper-slide.i3(href="/")
+              .i-inf
+                .i-title инфраструктура
+                .i-desc
+                  | список магазинов,
+                  br
+                  | кафе и других сервисов
+                  br
+                  | в кварталах и вокруг.
+                .i-detailed
+                  span подробнее
+            a.swiper-slide.i4(href="/")
+              .i-inf
+                .i-title история создания
+                .i-desc 
+                  | как и почему баланс
+                  br
+                  | получился именно таким
+                .i-detailed
+                  span подробнее
+            a.swiper-slide.i5(href="/")
+              .i-inf
+                .i-title кваpтиpы
+                .i-desc 
+                  | отделка, окна,
+                  br
+                  | балконы, планировки
+                  br
+                  | и другие детали
+                .i-detailed
+                  span подробнее
+            a.swiper-slide.i6(href="/")
+              .i-inf
+                .i-title дворы и парк
+                .i-desc 
+                  | 5 гектаров зелени
+                  br
+                  | и тропинки, проложенные
+                  br
+                  | согласно хитрому плану.
+                .i-detailed
+                  span подробнее

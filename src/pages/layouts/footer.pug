@@ -1,4 +1,31 @@
 footer.footer
   .inner
-    ul.footer-menu
-      li.footer-menu-item
+    .subscribe
+      .close
+        span
+        span
+      .item
+        .i-title pассылка
+        .i-desc 
+          | а еще у нас есть рассылка. там новости со стройки
+          br
+          | и всякий лайфстайл: подборки самых модных кроссовок,
+          br
+          | пиццерий и книг, которые призывают все откладывать
+          br
+          | на завтра. подпишись.
+      form.item(action="active.php", method="post")
+        .subitem.name
+          input(type="text", name="name" required)
+          label имя
+        .subitem.email
+          input(type="text", name="mail" required)
+          label email
+        .subitem.subscribe_btn
+          input(type="submit" value="подписаться")
+        .subitem.agreement
+          | нажимая на кнопку «подписаться»,
+          | я 
+          a(href="/") соглашаюсь  
+          |  на обработку моих
+          a(href="/") персональных данных

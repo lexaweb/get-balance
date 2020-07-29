@@ -29,7 +29,7 @@ $(document).ready(() => {
   $(".tab-content").each(function () {
     $(this).find(".tab-content-item").not(":first").hide();
   });
-  $(".tabs-hedings-title").click(function () {
+  $(".tab-heading-title").click(function () {
     $(this).addClass("active").siblings().removeClass("active");
     $(this)
       .parent()
@@ -53,5 +53,9 @@ $(document).ready(() => {
       header.removeClass("hide");
     }
     scrollPrev = scrolled;
+  });
+
+  $(".close").click(function () {
+    $(".subscribe").slideUp();
   });
 });
