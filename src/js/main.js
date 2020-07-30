@@ -10,11 +10,11 @@ $(document).ready(() => {
   $("select").select2();
 
   var mySwiper = new Swiper(".swiper-container", {
-    speed: 400,
-    spaceBetween: 100,
+    slidesPerView: 0,
+    speed: 100,
     pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
+      el: '.swiper-pagination',
+      dynamicBullets: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -22,8 +22,20 @@ $(document).ready(() => {
     },
   });
 
+  // var swiper = new Swiper('.swiper-container', {
+  //   slidesPerView: 4,
+  //   spaceBetween: 30,
+  //   centeredSlides: true,
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true,
+  //   },
+  // });
+
   $(".mb").click(function () {
     $(".header").toggleClass("active");
+    $(".menu").toggleClass("active");
+    $("body").toggleClass("over");
   });
 
   $(".tab-content").each(function () {

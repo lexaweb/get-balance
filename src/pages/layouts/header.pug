@@ -37,36 +37,40 @@ header.header
         +icon('header_logo_white')
         +icon('header_logo_black')
     .store
-      a(href="/") магазин квартир
+      a(href="/") 
+        span магазин квартир
         +icon('header_cart_white')
         +icon('header_cart_blue')
-    .menu
-      .inner
-        .main-menu
-          .menu-block
-            .menu-block-title проект
-            .menu-block-list
-              each a in project
-                a(href="/")=a.link
-          .menu-block
-            .menu-block-title покупка
-            .menu-block-list
-              each a in purchase
-                a(href="/")=a.link
-        .menu-slider
-          each item in slider
-            .swiper-slider
-              a(href="/")
-                .img
-                  img(src=item.img, alt=item.text)
-                span=item.text
-        .footer-menu
-          .contacts
-            .address
-              a(href="/") москва, рязанский проспект, 26
-            .mail
-              a(href="mailto:welcome@get-balance.ru") welcome@get-balance.ru
-          .dev_logo
+.menu
+  .inner
+    .main-menu
+      .menu-block
+        .menu-block-title проект
+        .menu-block-list
+          each a in project
+            a(href="/")=a.link
+      .menu-block
+        .menu-block-title покупка
+        .menu-block-list
+          each a in purchase
+            a(href="/")=a.link
+    .menu-slider.swiper-container
+      .swiper-button-prev
+      .swiper-pagination
+      .swiper-wrapper 
+        each item in slider
+          .swiper-slide
             a(href="/")
-              +icon('logo_glavstroy')
-            p один из крупнейших девелоперов россии, входит в список системообразующих компаний.
+              .img
+                img(src=item.img, alt=item.text)
+              span=item.text
+    .footer-menu
+      .contacts
+        .address
+          a(href="/") москва, рязанский проспект, 26
+        .mail
+          a(href="mailto:welcome@get-balance.ru") welcome@get-balance.ru
+      .dev_logo
+        a(href="/")
+          +icon('logo_glavstroy')
+        p один из крупнейших девелоперов россии, входит в список системообразующих компаний.

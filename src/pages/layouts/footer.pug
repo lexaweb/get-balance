@@ -1,31 +1,84 @@
 footer.footer
-  .inner
     .subscribe
-      .close
-        span
-        span
-      .item
-        .i-title pассылка
-        .i-desc 
-          | а еще у нас есть рассылка. там новости со стройки
-          br
-          | и всякий лайфстайл: подборки самых модных кроссовок,
-          br
-          | пиццерий и книг, которые призывают все откладывать
-          br
-          | на завтра. подпишись.
-      form.item(action="active.php", method="post")
-        .subitem.name
-          input(type="text", name="name" required)
-          label имя
-        .subitem.email
-          input(type="text", name="mail" required)
-          label email
-        .subitem.subscribe_btn
-          input(type="submit" value="подписаться")
-        .subitem.agreement
-          | нажимая на кнопку «подписаться»,
-          | я 
-          a(href="/") соглашаюсь  
-          |  на обработку моих
-          a(href="/") персональных данных
+      .inner
+        .close
+          span
+          span
+        .item
+          .i-title pассылка
+          .i-desc 
+            | а еще у нас есть рассылка. там новости со стройки
+            br
+            | и всякий лайфстайл: подборки самых модных кроссовок,
+            br
+            | пиццерий и книг, которые призывают все откладывать
+            br
+            | на завтра. подпишись.
+        form.item(action="active.php", method="post")
+          .subitem.name
+            input(type="text", name="name" required)
+            label имя
+          .subitem.email
+            input(type="text", name="mail" required)
+            label email
+          .subitem.subscribe_btn
+            input(type="submit" value="подписаться")
+          .subitem.agreement
+            | нажимая на кнопку «подписаться»,
+            | я 
+            a(href="/") соглашаюсь  
+            |  на обработку моих
+            a(href="/") персональных данных
+    .inner
+      .block
+        .logo
+          a(href="/")
+            +icon('logo-footer')
+          span 
+            b любимые
+            br
+            | жилые кварталы
+        .main-menu
+          .menu-block
+            .menu-block-title проект
+            .menu-block-list
+              each a in project
+                a.menu-block-list-link(href="/")=a.link     
+          .menu-block
+            .menu-block-title покупка
+            .menu-block-list
+              each a in purchase
+                a.menu-block-list-link(href="/")=a.link
+        .contacts
+          .phone
+            a(href="tel:+74951543818") +7 (495) 154-38-18
+          .address
+            a(href="/") москва, рязанский проспект, 26
+          .mail
+            a(href="mailto:welcome@get-balance.ru") welcome@get-balance.ru
+        .social
+          a.vk(href="/")
+          a.fb(href="/")
+          a.ig(href="/")
+          a.tg(href="/")
+        .policy
+          .sponsor 
+            | строительство
+            br
+            | финансирует сбеpбанк
+          .links
+            a(href="/") соглашение об обработке персональных данных
+            a(href="/") политика конфиденциальности
+        .dev-logo
+          a(href="/") 
+            +icon('logo_glavstroy')
+          span 
+            | один из крупнейших
+            br
+            | девелоперов россии,
+            br
+            | входит в список
+            br
+            | системообразующих
+            br
+            | компаний.
