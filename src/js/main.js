@@ -10,7 +10,7 @@ $(document).ready(() => {
   $("select").select2();
 
   var mySwiper = new Swiper(".swiper-container", {
-    slidesPerView: 0,
+    slidesPerView: "auto",
     spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',

@@ -4,6 +4,9 @@
   padding-bottom: 50px;
   background: #fff;
   border-top: 1px solid #d3d3d3;
+  @include media-tablet {
+    border-top: none;
+  }
   .subscribe {
     border-bottom: 1px solid #d3d3d3;
     .inner {
@@ -12,6 +15,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 70px 0;
+      @include media-tablet {
+        flex-wrap: wrap;
+      }
       .close {
         position: absolute;
         top: 20px;
@@ -35,6 +41,9 @@
       }
       .item {
         width: 50%;
+        @include media-tablet {
+          width: 100%;
+        }
         .i-title {
           font: 700 28px/28px $font;
           color: $black;
@@ -144,8 +153,14 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-bottom: 40px;
+        @include media-tablet-horizontal {
+          width: 77%;
+        }
         .menu-block {
           width: 65%;
+          @include media-tablet-horizontal {
+            width: 73%;
+          }
           &-title {
             font: 700 22px/1 $font;
             color: $black;
@@ -168,9 +183,15 @@
           }
           &:last-child {
             width: 35%;
+            @include media-tablet-horizontal {
+              width: 27%;
+            }
             .menu-block-list {
               .menu-block-list-link {
                 width: 38%;
+                @include media-tablet-horizontal {
+                  width: 51%;
+                }
               }
             }
           }
