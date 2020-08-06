@@ -12,15 +12,16 @@ $(document).ready(() => {
   var mySwiper = new Swiper(".swiper-container", {
     slidesPerView: "auto",
     spaceBetween: 30,
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
       clickable: true,
     },
-    // navigation: {
-    //   nextEl: ".swiper-button-next",
-    //   prevEl: ".swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 
   // var swiper = new Swiper('.swiper-container', {

@@ -1,4 +1,4 @@
-@import "../mixins/media";
+@import '../mixins/media';
 
 .footer {
   padding-bottom: 50px;
@@ -49,9 +49,13 @@
           color: $black;
         }
         .i-desc {
+          width: 80%;
           font: 400 18px/26px $font;
           color: $black;
           margin-top: 20px;
+          @include media-tablet {
+            width: 100%;
+          }
         }
         &:last-child {
           display: flex;
@@ -132,6 +136,11 @@
         width: 18%;
         margin-top: -15px;
         margin-bottom: 40px;
+        @include media-tablet {
+          width: 100%;
+          order: -1;
+          text-align: center;
+        }
         a {
           display: block;
           height: auto;
@@ -156,10 +165,19 @@
         @include media-tablet-horizontal {
           width: 77%;
         }
+        @include media-tablet {
+          width: 100%;
+          border-top: 1px solid #dbdbdb;
+          margin-top: 35px;
+          padding-top: 25px;
+        }
         .menu-block {
           width: 65%;
           @include media-tablet-horizontal {
             width: 73%;
+          }
+          @include media-custom {
+            width: 50%;
           }
           &-title {
             font: 700 22px/1 $font;
@@ -186,6 +204,10 @@
             @include media-tablet-horizontal {
               width: 27%;
             }
+            @include media-custom {
+              width: 36%;
+              margin-top: 20px;
+            }
             .menu-block-list {
               .menu-block-list-link {
                 width: 38%;
@@ -198,6 +220,11 @@
         }
       }
       .contacts {
+        @include media-tablet {
+          width: 100%;
+          order: -1;
+          text-align: center;
+        }
         .phone {
           a {
             font: 16px/23px $font;
@@ -209,6 +236,7 @@
           }
         }
         .address {
+          display: inline-block;
           a {
             position: relative;
             font: 700 16px/23px $font;
@@ -219,7 +247,7 @@
               text-decoration: underline;
             }
             &::after {
-              content: "";
+              content: '';
               position: absolute;
               width: 13px;
               height: 12px;
@@ -246,6 +274,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media-tablet {
+          width: 50%;
+          justify-content: flex-start;
+        }
         a {
           margin-left: 20px;
           transition: 0.3s;
@@ -282,6 +314,9 @@
         }
       }
       .policy {
+        @include media-tablet {
+          margin-bottom: 20px;
+        }
         .sponsor {
           font: 700 16px/22px $font;
           color: $black;

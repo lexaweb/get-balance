@@ -1,4 +1,4 @@
-@import "../mixins/media";
+@import '../mixins/media';
 
 .header {
   position: fixed;
@@ -222,6 +222,9 @@
           color: $black;
           margin-top: 10px;
           text-align: center;
+          @include media-tablet {
+            font-size: 15px;
+          }
         }
         &:last-child {
           margin-right: 0;
@@ -285,7 +288,7 @@
               text-decoration: underline;
             }
             &::before {
-              content: "";
+              content: '';
               position: absolute;
               width: 13px;
               height: 12px;
