@@ -47,6 +47,18 @@ body {
           display: block;
         }
       }
+      .scroll-map-tab {
+        overflow-x: scroll;
+        .scroll-map {
+          position: relative;
+          display: inline-block;
+          img {
+            width: auto;
+            height: 540px;
+            max-width: none;
+          }
+        }
+      }
       .swiper-container {
         width: 100%;
         height: auto;
@@ -167,6 +179,7 @@ body {
           }
           &-content {
             padding-top: 40px;
+            overflow: hidden;
             &-item {
               .img {
                 @include media-tablet {
@@ -394,16 +407,19 @@ body {
             }
           }
           .mi-slider {
+            position: relative;
             width: 100vw;
+            height: 100%;
             margin-top: 80px;
+            overflow: visible;
             &::before {
               content: '';
               position: absolute;
               top: 0;
-              left: -250px;
+              left: -400px;
               width: 400px;
               height: 100%;
-              background: linear-gradient(to right, #fff 75%, rgba(255, 255, 255, 0));
+              background: linear-gradient(to right, #fff, 75%, rgba(255, 255, 255, 0));
               z-index: 10;
               @include media-tablet {
                 display: none;
@@ -413,9 +429,13 @@ body {
               width: 43px;
               height: 98px;
               margin-top: 0;
-              left: 0;
+              left: -100px;
               transform: translateY(-50%);
               background: url('../img/icon_arrow_left.png');
+              cursor: pointer;
+              z-index: 10;
+              pointer-events: visible;
+              opacity: 1;
               @include media-tablet {
                 display: none;
               }
@@ -434,6 +454,10 @@ body {
                   width: 275px;
                   height: 340px;
                 }
+              }
+              .swiper-slide.swiper-slide-prev {
+                opacity: 0;
+                transition: opacity 0.3s;
               }
               .i-inf {
                 position: absolute;
@@ -480,14 +504,21 @@ body {
                 .i-inf {
                   left: 40px;
                   top: 75px;
+                  @include media-custom {
+                    top: 20px;
+                  }
                 }
               }
               .i2 {
                 background: url('../img/more_interesting_img2.jpg') no-repeat;
                 background-size: cover;
                 .i-inf {
-                  top: 20px;
-                  left: 20px;
+                  top: 220px;
+                  left: 220px;
+                  @include media-custom {
+                    top: 20px;
+                    left: 120px;
+                  }
                 }
               }
               .i3 {
@@ -537,9 +568,133 @@ body {
                 background: url('../img/more_interesting_img6.jpg') no-repeat;
                 background-size: cover;
                 .i-inf {
-                  top: 160px;
+                  top: 200px;
                   left: 30px;
+                  @include media-custom {
+                    top: 160px;
+                  }
                 }
+              }
+            }
+          }
+        }
+        &-8 {
+          .tab-content-item {
+            .dot {
+              &-item {
+                position: absolute;
+                display: inline-block;
+                &-circle {
+                  position: absolute;
+                  left: 7px;
+                  top: 50%;
+                  width: 18px;
+                  height: 18px;
+                  transform: translateY(-50%);
+                  background: #c73c25;
+                  border: 2px solid #dcdadb;
+                  border-radius: 50%;
+                  transition: 0.3s;
+                  cursor: pointer;
+                  &:hover {
+                    z-index: 10;
+                  }
+                  &:hover ~ .dot-item-name {
+                    position: relative;
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 1;
+                  }
+                }
+                &-name {
+                  font: 18px/1.5 $font;
+                  background: #f7f7f7;
+                  padding: 0 15px 5px 30px;
+                  border-radius: 16px;
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: 0.3s;
+                }
+              }
+              .i1 {
+                top: 33%;
+                left: 6%;
+              }
+              .i2 {
+                bottom: 27%;
+                left: 10%;
+              }
+              .i3 {
+                bottom: 39%;
+                left: 15%;
+              }
+              .i4 {
+                top: 38%;
+                left: 17%;
+              }
+              .i5 {
+                bottom: 47%;
+                left: 22%;
+              }
+              .i6 {
+                bottom: 45%;
+                left: 26%;
+              }
+              .i7 {
+                top: 32%;
+                left: 36%;
+              }
+              .i8 {
+                bottom: 47%;
+                left: 36%;
+              }
+              .i9 {
+                bottom: 41%;
+                left: 36%;
+              }
+              .i10 {
+                top: 40%;
+                left: 40%;
+              }
+              .i11 {
+                top: 31%;
+                left: 44%;
+              }
+              .i12 {
+                bottom: 27%;
+                left: 48%;
+              }
+              .i13 {
+                right: 29%;
+                bottom: 39%;
+              }
+              .i14 {
+                top: 31%;
+                right: 34%;
+              }
+              .i15 {
+                right: 32%;
+                bottom: 43%;
+              }
+              .i16 {
+                top: 35%;
+                right: 27%;
+              }
+              .i17 {
+                top: 42%;
+                right: 19%;
+              }
+              .i18 {
+                right: 17%;
+                bottom: 43%;
+              }
+              .i19 {
+                right: 8%;
+                bottom: 45%;
+              }
+              .i20 {
+                right: 6%;
+                bottom: 28%;
               }
             }
           }

@@ -144,6 +144,7 @@
     padding: 60px 0;
     overflow-y: auto;
     overflow-x: hidden;
+    overflow: visible;
     @include media-tablet {
       padding: 20px 0;
     }
@@ -202,11 +203,26 @@
       }
     }
     .menu-slider {
+      position: relative;
       display: flex;
+      width: 100vw;
+      height: auto;
       align-items: flex-start;
       margin-top: 115px;
       margin-bottom: 10px;
       padding-bottom: 40px;
+      .swiper-pagination {
+        display: none;
+        @include media-laptop {
+          display: block;
+        }
+        .swiper-pagination-bullet {
+          cursor: pointer;
+        }
+        .swiper-pagination-bullet-active {
+          background: $black;
+        }
+      }
       .swiper-slide {
         display: inline-block;
         width: 170px;
@@ -232,6 +248,13 @@
         &:hover {
           text-decoration: underline;
         }
+      }
+      .swiper-slide.swiper-slide-prev {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .swiper-slide.swiper-slide-active, .swiper-slide.swiper-slide-next {
+        opacity: 1;
       }
     }
     .swiper-container {
