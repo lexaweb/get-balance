@@ -53,8 +53,14 @@ body {
       }
       .tablet {
         display: none;
+        margin-bottom: 15px;
         @include media-tablet {
           display: block;
+        }
+        img {
+          width: 100%;
+          height: 540px;
+          object-fit: cover;
         }
       }
       .scroll-map-tab {
@@ -63,9 +69,12 @@ body {
           position: relative;
           display: inline-block;
           img {
-            width: auto;
-            height: 540px;
+            width: 100%;
             max-width: none;
+            @include media-tablet {
+              width: auto;
+              height: 540px;
+            }
           }
         }
       }
@@ -198,6 +207,26 @@ body {
               }
               .img-mb {
                 display: none;
+                img {
+                  width: 100%;
+                  height: 540px;
+                  object-fit: cover;
+                }
+                @include media-tablet {
+                  display: block;
+                }
+              }
+              .desc {
+                display: block;
+                @include media-tablet {
+                  display: none;
+                }
+              }
+              .mob {
+                display: none;
+                width: 100%;
+                height: 540px;
+                object-fit: cover;
                 @include media-tablet {
                   display: block;
                 }
@@ -214,12 +243,19 @@ body {
         .img-block-mb {
           display: none;
           margin-bottom: 45px;
+          img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+          }
           @include media-tablet {
             display: block;
           }
         }
         .green-mb1 {
           max-width: 200px;
+          height: auto;
+          object-fit: fill;
         }
         .green-mb2 {
           width: 100%;
@@ -291,6 +327,11 @@ body {
           .img-block {
             display: flex;
             margin-bottom: 45px;
+            img {
+              width: 100%;
+              height: 540px;
+              object-fit: cover;
+            }
           }
           .img-block.none {
             @include media-tablet {
@@ -424,7 +465,7 @@ body {
           }
           .mi-slider {
             position: relative;
-            width: 100vw;
+            width: 100%;
             height: 100%;
             margin-top: 80px;
             overflow: visible;
@@ -483,10 +524,16 @@ body {
                   font: 700 24px/34px $font;
                   color: $black;
                   margin-bottom: 20px;
+                  @include media-custom {
+                    margin-bottom: 10px;
+                  }
                 }
                 &-desc {
                   font: 400 17px/23px $font;
                   color: $black;
+                  @include media-custom {
+                    line-height: 18px;
+                  }
                 }
                 &-detailed {
                   margin-top: 15px;
@@ -522,6 +569,8 @@ body {
                   top: 75px;
                   @include media-custom {
                     top: 20px;
+                    left: 25px;
+                    width: 160px;
                   }
                 }
               }
@@ -532,8 +581,12 @@ body {
                   top: 220px;
                   left: 220px;
                   @include media-custom {
-                    top: 20px;
-                    left: 120px;
+                    top: 120px;
+                    left: 150px;
+                    width: 120px;
+                    .i-title {
+                      margin-bottom: 10px;
+                    }
                   }
                 }
               }
@@ -541,8 +594,8 @@ body {
                 background: url('../img/more_interesting_img3.jpg') no-repeat;
                 background-size: cover;
                 .i-inf {
-                  top: 40px;
-                  left: 55px;
+                  top: 20px;
+                  left: 35px;
                 }
               }
               .i4 {
@@ -578,6 +631,9 @@ body {
                 .i-inf {
                   top: 75px;
                   left: 50px;
+                  @include media-custom {
+                    left: 27px;
+                  }
                 }
               }
               .i6 {

@@ -58,8 +58,11 @@ block content
                   img(src="img/arrange_img1.jpg", alt="arrange_img1")
                 .item
                   img(src="img/arrange_img2.jpg", alt="arrange_img2")
-              .img-block-mb
-                img(src="img/arrange_img1_mob.jpg", alt="arrange_img1")
+              .swiper-container.tablet.img-block-mb
+                .swiper-pagination
+                .swiper-wrapper 
+                  img.swiper-slide(src="img/arrange_img1_mob.jpg", alt="arrange_img1")
+                  img.swiper-slide(src="img/arrange_img2_mob.jpg", alt="arrange_img2")
             .tab-content-item 
               .text микс из растений, напоминающий клумбы в «музеоне»: злаки, многолетние цветы и поля с ромашками вместо простых газонов.
               .img
@@ -100,7 +103,6 @@ block content
           | а для тех, кто торопится к метро, предусмотрены прямые и быстрые пути. кстати, ты бы хотел жить
           | поближе к станции, или чуть поодаль, чтобы успеть прогуляться с утра? 
           a(href="/") посмотри квартиры
-          br
           | , и выбери свой вариант.
       section.section-4
         .title
@@ -133,7 +135,6 @@ block content
         .title
           h2 зелень и цветники
         .text кленовые аллеи, березы, ели, сосны и даже яблони, а вокруг луговые цветники…
-          br
           | запасайся толстым альбомом для гербария.
         .img-block
           img(src="img/green_img1.jpg", alt="green_img1")
@@ -244,9 +245,11 @@ block content
             span.tab-heading-title зимой
           .tab-content
             .tab-content-item
-              img(src="img/playground_img4.jpg", alt="playground_img4")
+              img.desc(src="img/playground_img4.jpg", alt="playground_img4")
+              img.mob(src="img/playground_img4_mob.jpg", alt="playground_img4")
             .tab-content-item
-              img(src="img/playground_img5.jpg", alt="playground_img5")
+              img.desc(src="img/playground_img5.jpg", alt="playground_img5")
+              img.mob(src="img/playground_img5_mob.jpg", alt="playground_img5")
       section.section-8
         .title
           h2 двоpы
@@ -259,7 +262,8 @@ block content
             span.tab-heading-title концепция двора 2-го корпуса
           .tab-content
             .tab-content-item
-              img(src="img/yards_img1.jpg", alt="yards_img1")
+              img.desc(src="img/yards_img1.jpg", alt="yards_img1")
+              img.mob(src="img/yards_img1_mob.jpg", alt="yards_img1")
             .tab-content-item.scroll-map-tab
               .scroll-map
                 img(src="img/yards_img2.jpg", alt="yards_img2")

@@ -46,6 +46,8 @@ a {
   text-decoration: none;
   color: $black;
   transition: ease 0.3s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent !important;
 }
 ul {
   margin: 0;
@@ -71,4 +73,6 @@ table,
 blockquote {
   margin: 0;
   padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent !important;
 }
