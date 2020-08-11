@@ -2,6 +2,12 @@
 @import 'layouts/global';
 @import 'layouts/footer';
 
+html {
+  overflow-x: hidden;
+}
+html.over {
+  overflow-y: hidden;
+}
 body {
   overflow-x: hidden;
   .wrapper {
@@ -12,6 +18,10 @@ body {
     .top-block {
       height: 516px;
       background: url('../img/top_img1.jpg') 50% 0 fixed;
+      @include media-custom {
+        background: url('../img/top_img1_mob.jpg') 50% 0 no-repeat;
+        background-size: cover;
+      }
       .inner {
         display: flex;
         align-items: flex-end;

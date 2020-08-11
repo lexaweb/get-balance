@@ -41,6 +41,7 @@ $(document).ready(() => {
     $(".header").toggleClass("active");
     $(".menu").toggleClass("active");
     $("body").toggleClass("over");
+    $("html").toggleClass("over");
   });
 
   $(".tab-content").each(function () {
