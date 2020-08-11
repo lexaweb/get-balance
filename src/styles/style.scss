@@ -196,6 +196,12 @@ body {
                   display: none;
                 }
               }
+              .img-mb {
+                display: none;
+                @include media-tablet {
+                  display: block;
+                }
+              }
             }
           }
         }
