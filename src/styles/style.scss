@@ -82,6 +82,10 @@ body {
         width: 100%;
         height: auto;
         padding-bottom: 40px;
+        @include media-custom {
+          width: auto;
+          margin: 0 -20px 15px -20px;
+        }
         .swiper-pagination {
           display: none;
           @include media-laptop {
@@ -94,6 +98,9 @@ body {
             background: $black;
           }
         }
+      }
+      .swiper-container.flowers {
+        margin: 0 0 15px 0;
       }
       section {
         margin-top: 140px;
@@ -243,6 +250,9 @@ body {
         .img-block-mb {
           display: none;
           margin-bottom: 45px;
+          @include media-custom {
+            margin: 0 -20px 45px -20px;
+          }
           img {
             width: 100%;
             height: 540px;
@@ -327,6 +337,9 @@ body {
           .img-block {
             display: flex;
             margin-bottom: 45px;
+            @include media-custom {
+              margin: 0 -20px 45px -20px;
+            }
             img {
               width: 100%;
               height: 540px;
